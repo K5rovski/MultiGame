@@ -1,0 +1,15 @@
+C:\Users\Kiks\Documents\Visual Studio 2010\Projects\opentkForms\opentkForms\obj\x86\Debug\opentkForms.exe
+C:\Users\Kiks\Documents\Visual Studio 2010\Projects\opentkForms\opentkForms\obj\x86\Debug\opentkForms.pdb
+C:\Users\Kiks\Documents\Visual Studio 2010\Projects\opentkForms\opentkForms\bin\Debug\opentkForms.exe
+C:\Users\Kiks\Documents\Visual Studio 2010\Projects\opentkForms\opentkForms\bin\Debug\opentkForms.pdb
+C:\Users\Kiks\Documents\Visual Studio 2010\Projects\opentkForms\opentkForms\bin\Debug\OpenTK.dll
+C:\Users\Kiks\Documents\Visual Studio 2010\Projects\opentkForms\opentkForms\bin\Debug\OpenTK.GLControl.dll
+C:\Users\Kiks\Documents\Visual Studio 2010\Projects\opentkForms\opentkForms\bin\Debug\OpenTK.pdb
+C:\Users\Kiks\Documents\Visual Studio 2010\Projects\opentkForms\opentkForms\bin\Debug\OpenTK.xml
+C:\Users\Kiks\Documents\Visual Studio 2010\Projects\opentkForms\opentkForms\bin\Debug\OpenTK.GLControl.xml
+C:\Users\Kiks\Documents\Visual Studio 2010\Projects\opentkForms\opentkForms\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Kiks\Documents\Visual Studio 2010\Projects\opentkForms\opentkForms\obj\x86\Debug\opentkForms.MatchTwo.resources
+C:\Users\Kiks\Documents\Visual Studio 2010\Projects\opentkForms\opentkForms\obj\x86\Debug\opentkForms.Properties.Resources.resources
+C:\Users\Kiks\Documents\Visual Studio 2010\Projects\opentkForms\opentkForms\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Kiks\Documents\Visual Studio 2010\Projects\opentkForms\opentkForms\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\Kiks\Documents\Visual Studio 2010\Projects\opentkForms\opentkForms\obj\x86\Debug\opentkForms.StartScreen.resources
