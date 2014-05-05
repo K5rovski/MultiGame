@@ -8,7 +8,7 @@
     <ProjectGuid>{313C658E-79BA-4B71-BE1B-CB776A46868A}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SimpleSudoku</RootNamespace>
+    <RootNamespace>NameSimpleSudoku</RootNamespace>
     <AssemblyName>SimpleDraw</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>

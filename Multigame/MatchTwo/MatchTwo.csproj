@@ -99,7 +99,7 @@
     <None Include="Pictures\back.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Visual Studio 2010\Projects\SimpleDraw\SimpleDraw\SimpleSudoku.csproj">
+    <ProjectReference Include="..\SimpleSudoku\SimpleSudoku.csproj">
       <Project>{313C658E-79BA-4B71-BE1B-CB776A46868A}</Project>
       <Name>SimpleSudoku</Name>
     </ProjectReference>

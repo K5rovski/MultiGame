@@ -1,0 +1,10 @@
+C:\Users\Kiks\Documents\MultiGame\SimpleSudoku\bin\Release\SimpleDraw.exe
+C:\Users\Kiks\Documents\MultiGame\SimpleSudoku\bin\Release\SimpleDraw.pdb
+C:\Users\Kiks\Documents\MultiGame\SimpleSudoku\obj\Release\ResolveAssemblyReference.cache
+C:\Users\Kiks\Documents\MultiGame\SimpleSudoku\obj\Release\GenerateResource.read.1.tlog
+C:\Users\Kiks\Documents\MultiGame\SimpleSudoku\obj\Release\GenerateResource.write.1.tlog
+C:\Users\Kiks\Documents\MultiGame\SimpleSudoku\obj\Release\SimpleDraw.exe
+C:\Users\Kiks\Documents\MultiGame\SimpleSudoku\obj\Release\SimpleDraw.pdb
+C:\Users\Kiks\Documents\MultiGame\SimpleSudoku\obj\Release\NameSimpleSudoku.Export_Menu.resources
+C:\Users\Kiks\Documents\MultiGame\SimpleSudoku\obj\Release\NameSimpleSudoku.SimpleSudoku.resources
+C:\Users\Kiks\Documents\MultiGame\SimpleSudoku\obj\Release\NameSimpleSudoku.Properties.Resources.resources

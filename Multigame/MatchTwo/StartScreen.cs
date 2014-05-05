@@ -6,8 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-
-
+using NameSimpleSudoku;
 namespace MultiGame
 {
     public partial class StartScreen : Form
@@ -54,13 +53,13 @@ namespace MultiGame
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
             Rectangle rec2 = new Rectangle(0, 0, panel2.Width, panel2.Height);
-            e.Graphics.DrawImage(SimpleSudoku.Properties.Resources.logo, rec2);
+            e.Graphics.DrawImage(NameSimpleSudoku.Properties.Resources.logo, rec2);
            
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            SimpleSudoku.SimpleSudoku s = new SimpleSudoku.SimpleSudoku();
+            NameSimpleSudoku.SimpleSudoku s = new NameSimpleSudoku.SimpleSudoku();
             s.ShowDialog();
             s.timer.Stop();
         }

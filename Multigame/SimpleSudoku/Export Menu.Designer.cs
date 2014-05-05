@@ -1,4 +1,4 @@
-﻿namespace SimpleSudoku
+﻿namespace NameSimpleSudoku
 {
     partial class Export_Menu
     {

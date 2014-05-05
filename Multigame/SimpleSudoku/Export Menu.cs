@@ -8,7 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.Drawing.Text;
 
-namespace SimpleSudoku
+namespace NameSimpleSudoku
 {
     public partial class Export_Menu : Form
     {
@@ -38,8 +38,8 @@ namespace SimpleSudoku
             saveFileDialog1.ShowDialog();
             Random gen = new Random();
             SudokuTabla sud;
-            int width = 320;
-            if (listBox1.SelectedIndex > 0) width = 1020;
+          
+            
             Image img= new Bitmap(1020+20,520*(listBox1.SelectedIndex+1)/2);
             Graphics g = Graphics.FromImage(img);
                 g.Clear(Color.White);

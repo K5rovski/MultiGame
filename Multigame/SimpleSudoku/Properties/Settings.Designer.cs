@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SimpleSudoku.Properties {
+namespace NameSimpleSudoku.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]

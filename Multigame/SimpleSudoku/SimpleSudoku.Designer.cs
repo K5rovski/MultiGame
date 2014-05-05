@@ -1,4 +1,4 @@
-﻿namespace SimpleSudoku
+﻿namespace NameSimpleSudoku
 {
     partial class SimpleSudoku
     {
@@ -29,15 +29,13 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.RemainingLabel = new System.Windows.Forms.Label();
             this.TimeLabel = new System.Windows.Forms.Label();
-
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
-            this.RemainingLabel = new System.Windows.Forms.Label();
-
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -45,7 +43,6 @@
             // 
             this.panel1.Controls.Add(this.RemainingLabel);
             this.panel1.Controls.Add(this.TimeLabel);
-   
             this.panel1.Location = new System.Drawing.Point(122, 69);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(550, 531);
@@ -53,16 +50,25 @@
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             this.panel1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseClick);
             // 
-            // label5
+            // RemainingLabel
+            // 
+            this.RemainingLabel.AutoSize = true;
+            this.RemainingLabel.Font = new System.Drawing.Font("Skorid", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RemainingLabel.Location = new System.Drawing.Point(27, 29);
+            this.RemainingLabel.Name = "RemainingLabel";
+            this.RemainingLabel.Size = new System.Drawing.Size(58, 22);
+            this.RemainingLabel.TabIndex = 8;
+            this.RemainingLabel.Text = "Time: 0:0";
+            // 
+            // TimeLabel
             // 
             this.TimeLabel.AutoSize = true;
             this.TimeLabel.Font = new System.Drawing.Font("Skorid", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TimeLabel.Location = new System.Drawing.Point(429, 29);
-            this.TimeLabel.Name = "label5";
+            this.TimeLabel.Name = "TimeLabel";
             this.TimeLabel.Size = new System.Drawing.Size(58, 22);
             this.TimeLabel.TabIndex = 7;
             this.TimeLabel.Text = "Time: 0:0";
-
             // 
             // button3
             // 
@@ -114,41 +120,25 @@
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
-            // label6
-            // 
-            this.RemainingLabel.AutoSize = true;
-            this.RemainingLabel.Font = new System.Drawing.Font("Skorid", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RemainingLabel.Location = new System.Drawing.Point(27, 29);
-            this.RemainingLabel.Name = "label6";
-            this.RemainingLabel.Size = new System.Drawing.Size(58, 22);
-            this.RemainingLabel.TabIndex = 8;
-            this.RemainingLabel.Text = "Time: 0:0";
-          
-            // 
-            // Form2
+            // SimpleSudoku
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(743, 673);
             this.Controls.Add(this.button5);
-            
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button7);
-      
-        
             this.Controls.Add(this.panel1);
-            this.Name = "Form2";
-            this.Text = "draw";
-          
+            this.Name = "SimpleSudoku";
+            this.Text = "SimpleSudoku";
             this.Load += new System.EventHandler(this.Form2_Load);
             this.Shown += new System.EventHandler(this.Form2_Shown);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form2_Paint);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
