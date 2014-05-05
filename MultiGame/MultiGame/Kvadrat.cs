@@ -8,6 +8,7 @@ using OpenTK.Graphics.OpenGL;
 using OpenTK;
 namespace MultiGame
 {
+   // komentar git
    public class Kvadrat
     {
         public double X_;
