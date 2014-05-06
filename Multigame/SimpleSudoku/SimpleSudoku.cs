@@ -34,6 +34,7 @@ namespace NameSimpleSudoku
         public Image back;
         public Timer timer;
         public bool Stopped = false;
+
         public SimpleSudoku()
         {
            
@@ -112,6 +113,7 @@ namespace NameSimpleSudoku
             int devetina = (im.Width / 9) ;
             Font f = new Font(FontFamily.GenericMonospace,12);
             Font fBold = new Font(FontFamily.GenericSerif, 14, FontStyle.Underline);
+          
             for (int i = 0; i < 9; i++)
             {
                 for (int j = 0; j < 9; j++)
@@ -129,8 +131,11 @@ namespace NameSimpleSudoku
                         if (sud.Workingtabla[i][j] == sud.tablata[i][j] || sud.Workingtabla[i][j] == 0)
                             g.FillRectangle(new SolidBrush(Bboja), (devetina * j), (devetina * i), devetina - 2, devetina - 2);
                         else
+                        {
                             g.FillRectangle(new SolidBrush(Color.Red), (devetina * j), (devetina * i), devetina - 2, devetina - 2);
-                        g.DrawRectangle(new Pen(Fboja), (devetina * j), (devetina * i), devetina - 2, devetina - 2);
+                           
+                        }
+                            g.DrawRectangle(new Pen(Fboja), (devetina * j), (devetina * i), devetina - 2, devetina - 2);
                     }
                     if (ZaPrintanje) 
                     g.DrawRectangle(new Pen(Bboja), (devetina * j), (devetina * i), devetina - 2, devetina - 2);
@@ -175,7 +180,7 @@ namespace NameSimpleSudoku
             Font fBold = new Font(Font.FontFamily, 12, FontStyle.Underline);
             if (i2 > 9) i2 = 9;
             if (j2 > 9) j2 = 9;
-           
+          
             for (int i = i1; i < i2; i++)
             {
                 for (int j = j1; j < j2; j++)
@@ -186,11 +191,13 @@ namespace NameSimpleSudoku
                         red = Color.FromArgb(25 * ((j) / 3), 10, 20 * ((i) / 3));
                     else
                         red = Color.FromArgb(25 * ((j) / 3), 20 * ((i) / 3), 10);
-                    if (Stabla.Workingtabla[i][j]==Stabla.tablata[i][j] || Stabla.Workingtabla[i][j]==0)
-                    GraphicsObject.FillRectangle(new SolidBrush(red), (desetinaX * j +pocX ), (desetinaY * i +pocY),desetinaX-2, desetinaY-2);
+                    if (Stabla.Workingtabla[i][j] == Stabla.tablata[i][j] || Stabla.Workingtabla[i][j] == 0)
+                        GraphicsObject.FillRectangle(new SolidBrush(red), (desetinaX * j + pocX), (desetinaY * i + pocY), desetinaX - 2, desetinaY - 2);
                     else
+                    {
                         GraphicsObject.FillRectangle(new SolidBrush(Color.Red), (desetinaX * j + pocX), (desetinaY * i + pocY), desetinaX - 2, desetinaY - 2);
-
+                       
+                    }
                     GraphicsObject.DrawRectangle(new Pen(Color.Wheat), (desetinaX * j + pocX), (desetinaY * i + pocY), desetinaX - 2, desetinaY - 2);
 
                     if (Stabla.Workingtabla[i][j] != 0 && Stabla.IspraznetaTabla[i][j]!=0)  
@@ -203,7 +210,7 @@ namespace NameSimpleSudoku
             
            
             Rectangle rect = new Rectangle(0, 0, panel1.Width, panel1.Height);
-            if (Stabla.Remaining == 0)
+            if (Stabla.Remaining == 0  )
                 kraj();
             
          //   PicRect = new Rectangle(0, 0, (int)(panel1.Width*0.15),(int) (panel1.Height*faktor));
@@ -321,15 +328,19 @@ namespace NameSimpleSudoku
                     int iks = (int)(100 * ((double)(-SaveX + e.X)) / check.Width) / 33;
                     //label2.Text = iks + "  " + ipsilon;
                     //label3.Text = check.Width + "  " + check.Height;
-                    if (ipsilon == 3 && Stabla.Workingtabla[SkliknatoI][SkliknatoJ]!=0)
-                    { Stabla.Workingtabla[SkliknatoI][SkliknatoJ] = 0; Stabla.Remaining++; }
+                    if (Stabla.tablata[SkliknatoI][SkliknatoJ] == (ipsilon) * 3 + (iks) + 1 && Stabla.Workingtabla[SkliknatoI][SkliknatoJ] != Stabla.tablata[SkliknatoI][SkliknatoJ])
+                        Stabla.Remaining--;
+                    else if (Stabla.Workingtabla[SkliknatoI][SkliknatoJ] == Stabla.tablata[SkliknatoI][SkliknatoJ] && Stabla.tablata[SkliknatoI][SkliknatoJ] != (ipsilon) * 3 + (iks) + 1)
+                        Stabla.Remaining++;
+                        if (ipsilon == 3 && Stabla.Workingtabla[SkliknatoI][SkliknatoJ]!=0)
+                    { Stabla.Workingtabla[SkliknatoI][SkliknatoJ] = 0; }
                     else if (ipsilon!=3)
                     {
-                        if (Stabla.Workingtabla[SkliknatoI][SkliknatoJ] == 0)
-                            Stabla.Remaining--;
+                        
                         Stabla.Workingtabla[SkliknatoI][SkliknatoJ] = (ipsilon) * 3 + (iks) + 1;
                        
                     }
+                    
                         Invalidate();
                     return;
                 }
@@ -366,7 +377,7 @@ namespace NameSimpleSudoku
             Invalidate();
         }
 
-        private void Form2_Paint(object sender, PaintEventArgs e)
+        private void SimpleSudoku_Paint(object sender, PaintEventArgs e)
         {
       //      e.Graphics.DrawImage(back, 0, 0, Width, Height);
           //  panel1.CreateGraphics().DrawImage(back, 0, 0, panel1.Width, panel1.Height);
