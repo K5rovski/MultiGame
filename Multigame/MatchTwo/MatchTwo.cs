@@ -9,7 +9,7 @@ using System.Windows.Forms;
 using OpenTK.Graphics;
 using OpenTK.Graphics.OpenGL;
 
-namespace MultiGame
+namespace NameMatchTwo
 {
 
 

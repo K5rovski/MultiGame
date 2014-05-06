@@ -6,7 +6,7 @@ using System.Drawing;
 using OpenTK.Graphics;
 using OpenTK.Graphics.OpenGL;
 using OpenTK;
-namespace MultiGame
+namespace NameMatchTwo
 {
    public class Kvadrat
     {

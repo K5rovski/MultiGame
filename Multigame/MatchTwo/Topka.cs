@@ -5,7 +5,7 @@ using System.Text;
 using OpenTK.Graphics;
 using OpenTK.Graphics.OpenGL;
 using System.Drawing;
-namespace MultiGame
+namespace NameMatchTwo
 {
  public   class Topka
     {
@@ -111,12 +111,11 @@ namespace MultiGame
             // glNormal3f(0,1,0);
         }
      public static void LoadTextures(){
-      string _Name = "../../Pictures/" + "topka" + ".jpg";
-                if (System.IO.File.Exists(_Name))
-                {
+     
+               
                     //make a bitmap out of the file on the disk
                     
-                    Bitmap TextureBitmap = new Bitmap(_Name);
+                    Bitmap TextureBitmap =Properties.Resources.topka;
                     //get the data out of the bitmap
 
                     GL.GenTextures(1, out teks);
@@ -148,7 +147,7 @@ namespace MultiGame
                     GL.TexParameter(TextureTarget.Texture2D, TextureParameterName.TextureMinFilter, (int)TextureMinFilter.Linear);
                     GL.TexParameter(TextureTarget.Texture2D, TextureParameterName.TextureMagFilter, (int)TextureMagFilter.Linear);
 
-                }
+                
      
      
      }

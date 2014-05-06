@@ -6,7 +6,7 @@ using System.Drawing;
 using OpenTK.Graphics;
 using OpenTK.Graphics.OpenGL;
 using OpenTK;
-namespace MultiGame
+namespace NameMatchTwo
 {
  public   class Tabla
     {
@@ -37,22 +37,22 @@ namespace MultiGame
              case 'њ':
              case 'w':
                  Plus();
-                 // obnovi go prikazot
+                
                  break;
              case 'с':
              case 's':
                  Minus();
-                 // obnovi go prikazot
+                
                  break;
              case 'д':
              case 'd':
                  RPlus();
-                 // obnovi go prikazot
+                
                  break;
              case 'а':
              case 'a':
                  RMinus();
-                 // obnovi go prikazot
+                
                  break;
              case ' ':
                  Keyboard_In(Topka_Place);
@@ -71,19 +71,19 @@ namespace MultiGame
          {
              case ConsoleKey.W:
                  Plus();
-                 // obnovi go prikazot
+                
                  break;
              case ConsoleKey.S:
                  Minus();
-                 // obnovi go prikazot
+                
                  break;
              case ConsoleKey.D:
                  RPlus();
-                 // obnovi go prikazot
+                
                  break;
              case ConsoleKey.A:
                  RMinus();
-                 // obnovi go prikazot
+                
                  break;
              case ConsoleKey.Spacebar:
                  Keyboard_In(Topka_Place);
@@ -91,19 +91,19 @@ namespace MultiGame
                  break;
              case ConsoleKey.UpArrow:
                  Plus();
-                 // obnovi go prikazot
+                
                  break;
              case ConsoleKey.DownArrow:
                  Minus();
-                 // obnovi go prikazot
+                
                  break;
              case ConsoleKey.RightArrow:
                  RPlus();
-                 // obnovi go prikazot
+                
                  break;
              case ConsoleKey.LeftArrow:
                  RMinus();
-                 // obnovi go prikazot
+                
                  break;
              case ConsoleKey.Enter:
                  Keyboard_In(Topka_Place);
@@ -161,7 +161,7 @@ namespace MultiGame
                  {
                      tabla[i].Deleted = true;
                      tabla[tabla[i].Partner].Deleted = true;
-                     RPlus();
+        //Maybe Change             RPlus();
                  }
                  
                  break;
@@ -171,15 +171,16 @@ namespace MultiGame
      }
      public static void LoadTextures()
      {
-         string _Name = "../../Pictures/";
+         GL.Enable(EnableCap.Texture2D);
+         string _Name; 
          for (int i = 0; i < 5; i++)
          {
-             _Name = "../../Pictures/" + ((char)(97 + i)) + ".png";
-             if (System.IO.File.Exists(_Name))
-             {
-                 //make a bitmap out of the file on the disk
-                 GL.Enable(EnableCap.Texture2D);
-                 Bitmap TextureBitmap = new Bitmap(_Name);
+            
+             _Name = ((char)(97 + i)).ToString();
+            
+            
+                 
+                 Bitmap TextureBitmap = Properties.Resources.ResourceManager.GetObject(_Name) as Bitmap;
                  //get the data out of the bitmap
 
                  GL.GenTextures(1, out Site_Teksturi[i]);
@@ -211,7 +212,7 @@ namespace MultiGame
                  GL.TexParameter(TextureTarget.Texture2D, TextureParameterName.TextureMinFilter, (int)TextureMinFilter.Linear);
                  GL.TexParameter(TextureTarget.Texture2D, TextureParameterName.TextureMagFilter, (int)TextureMagFilter.Linear);
 
-             }
+             
          }
 
      }

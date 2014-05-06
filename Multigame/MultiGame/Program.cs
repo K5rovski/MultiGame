@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace NameMatchTwo
+namespace NameStartScreen
 {
     static class Program
     {
@@ -15,7 +15,7 @@ namespace NameMatchTwo
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MatchTwo(4));
+            Application.Run(new StartScreen());
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿namespace MultiGame
+﻿namespace NameMatchTwo
 {
     partial class MatchTwo
     {
