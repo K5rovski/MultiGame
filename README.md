@@ -16,7 +16,8 @@ This 'MultiGame' is comprised of two games: MatchTwo and SimpleSudoku, in order 
    At the bottom of the window you can see two buttons which allow you to see the highscores of the two available games.
    If you haven't finished a game your Score is logged as Unfinished.
    
-   There are only 30 Spots for HighScores for the two games
+   There are only 30 Spots for HighScores for the two games.
+   
    After each playing session the highscores are saved locally (in the file SavedScores.savedS).
    
    After you enter your name you can play either the game MatchTwo or SimpleSudoku.
