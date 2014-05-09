@@ -6,7 +6,10 @@ MultiGame
 -----------
 
 This 'MultiGame' is comprised of two games: MatchTwo and SimpleSudoku, in order to compile the game you need to install Opentk which is located at http://www.opentk.com/
-  After installing Opentk you can open and edit the solution in Visual Stuido
+  After installing Opentk you can open and edit the solution in Visual Studio
+  
+  If you just want to play the Game you can download the basic zip file Release.zip located at https://github.com/K5rovski/MultiGame/tree/master/Multigame
+  
   
   The look of the startscreen is :
   
