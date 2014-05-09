@@ -29,8 +29,8 @@ namespace NameStartScreen
             FileStream myStream;
             try
             {
-                if (File.Exists("../../SavedScores.savedS") && 
-                    (myStream = File.Open("../../SavedScores.savedS", FileMode.Open)) != null)
+                if (File.Exists("SavedScores.savedS") && 
+                    (myStream = File.Open("SavedScores.savedS", FileMode.Open)) != null)
                 {
                     using (myStream)
                     {
@@ -38,7 +38,7 @@ namespace NameStartScreen
                         scores = bf.Deserialize(myStream) as ScoreList;
                     }
                 }
-                else if (!File.Exists("../../SavedScores.savedS")) {
+                else if (!File.Exists("SavedScores.savedS")) {
                     scores = new ScoreList();
                 }
             }
@@ -132,7 +132,7 @@ namespace NameStartScreen
             FileStream myStream;
             try
             {
-                if ((myStream = File.Open("../../SavedScores.savedS",FileMode.Create)) != null)
+                if ((myStream = File.Open("SavedScores.savedS",FileMode.Create)) != null)
                 {
                     using (myStream)
                     {
