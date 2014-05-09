@@ -17,7 +17,7 @@ namespace NameMatchTwo
       
         public int N_Tekstura;
         public double agol;
-        public static int temp = 0;
+        
         public Color boja;
         public double R_speed = 0;
         public double KrajnaPozicija = 0;

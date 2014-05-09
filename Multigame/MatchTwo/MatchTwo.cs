@@ -23,7 +23,7 @@ namespace NameMatchTwo
         static double nasoka_y = 4;
         static double nasoka_z = 0;
         public int tajmer_ticks = 0;
-     
+        public string Score;
         public Tabla kocki;
         Random gen;
         public Image back;
@@ -39,9 +39,10 @@ namespace NameMatchTwo
             gen = new Random();
             kocki = new Tabla(v);
             label1.ForeColor = Color.FromArgb(170,68,0);
-
+            Score = null;
             back = Properties.Resources.back;
-
+            glControl1.BringToFront();
+            glControl1.Focus();
             DoubleBuffered = true;
             
         }
@@ -160,19 +161,14 @@ namespace NameMatchTwo
 
       
 
-        private void glControl1_Click(object sender, EventArgs e)
-        {
-          
-
-        }
         public void ShowScore(Graphics g, int lokacija) {
             string[] temp = label1.Text.Split(':');
             int min, sek,vkupno;
             int.TryParse(temp[0], out min);
             int.TryParse(temp[1], out sek);
             vkupno = min * 60 + sek;
-
-            string s = string.Format("Your score is: {0:00} points", (10000-(vkupno * 10))*kocki.VoKolona);
+            Score = ((10000 - (vkupno * 10)) * kocki.VoKolona).ToString();
+            string s = string.Format("Your score is: {0:00} points", Score);
             Point p= new Point( 0,0);
 
             g.DrawString(s, label1.Font, new SolidBrush(label1.ForeColor), p);
@@ -340,6 +336,10 @@ namespace NameMatchTwo
             timer1.Stop();
             this.Close();
         }
+
+        
+
+
 
   
 

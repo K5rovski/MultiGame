@@ -76,7 +76,7 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(113, 20);
             this.button3.TabIndex = 7;
-            this.button3.Text = "Back";
+            this.button3.Text = "Назад";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -86,7 +86,7 @@
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(113, 20);
             this.button4.TabIndex = 8;
-            this.button4.Text = "Clear";
+            this.button4.Text = "Исчисти";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
@@ -96,7 +96,7 @@
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(113, 20);
             this.button5.TabIndex = 9;
-            this.button5.Text = "Show Solved";
+            this.button5.Text = "Покажи решени";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
@@ -106,7 +106,7 @@
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(113, 20);
             this.button6.TabIndex = 10;
-            this.button6.Text = "New Game";
+            this.button6.Text = "Нова игра";
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
@@ -116,7 +116,7 @@
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(113, 20);
             this.button7.TabIndex = 11;
-            this.button7.Text = "Export...";
+            this.button7.Text = "Експортирај...";
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
@@ -135,7 +135,7 @@
             this.Text = "SimpleSudoku";
             this.Load += new System.EventHandler(this.Form2_Load);
             this.Shown += new System.EventHandler(this.Form2_Shown);
-            this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form2_Paint);
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.SimpleSudoku_Paint);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

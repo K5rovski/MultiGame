@@ -34,7 +34,7 @@ namespace NameSimpleSudoku
         public Image back;
         public Timer timer;
         public bool Stopped = false;
-
+        public string Score;
         public SimpleSudoku()
         {
            
@@ -47,6 +47,7 @@ namespace NameSimpleSudoku
             timer = new Timer();
             timer.Interval = 1000;
             timer.Start();
+            Score = null;
             timer.Tick += new EventHandler(timer_Tick);
             this.BackColor = panel1.BackColor = Color.FromArgb(17,17,17);
             back = Properties.Resources.bac2;
@@ -226,7 +227,8 @@ namespace NameSimpleSudoku
             timer.Stop();
             button4.Enabled = false;
             string[] dva=TimeLabel.Text.ToString().Split(':');
-            TimeLabel.Text = "Your time was: " + dva[1] + ':' + dva[2];
+            Score =dva[1] + ':' + dva[2];
+            TimeLabel.Text = "Your time was: "+Score;
         }
 
 

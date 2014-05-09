@@ -6,6 +6,7 @@ using System.Drawing;
 using OpenTK.Graphics;
 using OpenTK.Graphics.OpenGL;
 using OpenTK;
+using System.Windows.Forms;
 namespace NameMatchTwo
 {
  public   class Tabla
@@ -63,49 +64,49 @@ namespace NameMatchTwo
          }
 
      }
-     public void InputK(ConsoleKey l)
+     public void InputK(Keys l)
      {
          
          if (Stopped) return;
          switch (l)
          {
-             case ConsoleKey.W:
+             case Keys.W:
                  Plus();
                 
                  break;
-             case ConsoleKey.S:
+             case Keys.S:
                  Minus();
                 
                  break;
-             case ConsoleKey.D:
+             case Keys.D:
                  RPlus();
                 
                  break;
-             case ConsoleKey.A:
+             case Keys.A:
                  RMinus();
                 
                  break;
-             case ConsoleKey.Spacebar:
+             case Keys.Space:
                  Keyboard_In(Topka_Place);
 
                  break;
-             case ConsoleKey.UpArrow:
+             case Keys.Up:
                  Plus();
                 
                  break;
-             case ConsoleKey.DownArrow:
+             case Keys.Down:
                  Minus();
                 
                  break;
-             case ConsoleKey.RightArrow:
+             case Keys.Right:
                  RPlus();
                 
                  break;
-             case ConsoleKey.LeftArrow:
+             case Keys.Left:
                  RMinus();
                 
                  break;
-             case ConsoleKey.Enter:
+             case Keys.Enter:
                  Keyboard_In(Topka_Place);
 
                  break;
@@ -144,9 +145,10 @@ namespace NameMatchTwo
          return tabla[i];
      }
      public void CheckDelete(int a, int b) {
-         if (tabla[a].N_Tekstura == tabla[b].N_Tekstura) { 
+         if (tabla[a].N_Tekstura == tabla[b].N_Tekstura && tabla[a].Partner==-1 && tabla[b].Partner==-1) { 
          tabla[b].ToDelete=true; // delete flag true when finishes 
          tabla[b].Partner = a; // spari go so a
+         tabla[a].Partner=b;
          SelektiranOne = SelektiranTwo = -1;
          }
      }

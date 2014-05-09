@@ -34,3 +34,4 @@ C:\Users\Kiks\Documents\Multigame\MultiGame\obj\x86\Release\GenerateResource.rea
 C:\Users\Kiks\Documents\Multigame\MultiGame\obj\x86\Release\GenerateResource.write.1.tlog
 C:\Users\Kiks\Documents\Multigame\MultiGame\obj\x86\Release\MultiGame.exe
 C:\Users\Kiks\Documents\Multigame\MultiGame\obj\x86\Release\MultiGame.pdb
+C:\Users\Kiks\Documents\Multigame\MultiGame\obj\x86\Release\NameStartScreen.ScoreScreen.resources

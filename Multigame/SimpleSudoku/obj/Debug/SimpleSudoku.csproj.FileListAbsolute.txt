@@ -10,5 +10,13 @@ C:\Users\Kiks\Documents\Visual Studio 2010\Projects\SimpleDraw\SimpleDraw\obj\De
 C:\Users\Kiks\Documents\Visual Studio 2010\Projects\SimpleDraw\SimpleDraw\obj\Debug\SimpleDraw.pdb
 C:\Users\Kiks\Documents\MultiGame\SimpleSudoku\SimpleSudoku\obj\Debug\SimpleDraw.exe
 C:\Users\Kiks\Documents\MultiGame\SimpleSudoku\SimpleSudoku\obj\Debug\SimpleDraw.pdb
-C:\Users\Kiks\Documents\MultiGame\SimpleSudoku\obj\Debug\SimpleDraw.exe
-C:\Users\Kiks\Documents\MultiGame\SimpleSudoku\obj\Debug\SimpleDraw.pdb
+C:\Users\Kiks\Documents\Multigame\SimpleSudoku\bin\Debug\SimpleSudoku.exe
+C:\Users\Kiks\Documents\Multigame\SimpleSudoku\bin\Debug\SimpleSudoku.pdb
+C:\Users\Kiks\Documents\Multigame\SimpleSudoku\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Kiks\Documents\Multigame\SimpleSudoku\obj\Debug\NameSimpleSudoku.Export_Menu.resources
+C:\Users\Kiks\Documents\Multigame\SimpleSudoku\obj\Debug\NameSimpleSudoku.SimpleSudoku.resources
+C:\Users\Kiks\Documents\Multigame\SimpleSudoku\obj\Debug\NameSimpleSudoku.Properties.Resources.resources
+C:\Users\Kiks\Documents\Multigame\SimpleSudoku\obj\Debug\GenerateResource.read.1.tlog
+C:\Users\Kiks\Documents\Multigame\SimpleSudoku\obj\Debug\GenerateResource.write.1.tlog
+C:\Users\Kiks\Documents\Multigame\SimpleSudoku\obj\Debug\SimpleSudoku.exe
+C:\Users\Kiks\Documents\Multigame\SimpleSudoku\obj\Debug\SimpleSudoku.pdb
