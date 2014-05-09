@@ -52,6 +52,7 @@ namespace NameStartScreen
         {
             if (!ValidateChildren()) return;
             MatchTwo m = new MatchTwo((listBox1.SelectedIndex + 1) * 2);
+            m.StartPosition = FormStartPosition.CenterScreen;
             m.ShowDialog();
             m.timer1.Stop();
             if (m.Score == null) m.Score = "Unfinished";
@@ -94,6 +95,7 @@ namespace NameStartScreen
         {
             if (!ValidateChildren()) return;
             SimpleSudoku s = new SimpleSudoku();
+            s.StartPosition = FormStartPosition.CenterScreen;
             s.ShowDialog();
             s.timer.Stop();
             if (s.Score == null) s.Score = "Unfinished";
