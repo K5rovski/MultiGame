@@ -63,4 +63,104 @@ There are several standard options such as clearing the board, starting a new ga
 Your Score is based on the time passed since starting the game.
 
 
+Function Explanation
+------------------
+
+
+ 'public void Keyboard_In (int kliknat)' is the function in MatchTwo/Tabla.cs that is called whenever a player presses SPACE, it deals with the (de)selection  of the cubes.
+ 
+ The argument of the function is the location of the newly selected cube.
+ 
+ if (SelektiranOne == -1) {
+             SelektiranOne = kliknat;
+             tabla[SelektiranOne].ChangeDirection(); // 
+         }
+         
+      if the first selection is empty the code above sets it to the new location 'kliknat' and changes the direction of the selected cube
+      
+       else if (SelektiranOne!=-1 && SelektiranTwo!=-1) {
+             tabla[SelektiranOne].ChangeDirection();  // 
+             tabla[SelektiranTwo].ChangeDirection(); //
+             SelektiranTwo=SelektiranOne=-1;
+             SelektiranOne = kliknat;
+             tabla[SelektiranOne].ChangeDirection();
+         
+         
+         }
+         
+         if the two selections are not empty it changes their location. direction and sets the first selection to 'kliknat' changing its direction and deselects the second selection.
+         
+         else if (SelektiranOne == kliknat) { 
+         tabla[SelektiranOne].ChangeDirection(); // odselektiraj krajna pozicija i nasoka
+         SelektiranOne=-1;
+         }
+         
+         if you select the already selected element it deselects it and changes the direction.
+         
+          else  if (SelektiranTwo==-1){
+             SelektiranTwo=kliknat;
+         tabla[SelektiranTwo].ChangeDirection();  // selektiraj 
+             CheckDelete(SelektiranOne,SelektiranTwo); // ako se ednakvi teksturite napravi selecttwo i izbrisi two 
+         }
+         
+         if only the first selection is made this sets the second selection,changes its direction, also checking to seee if the two selections are the same.
+         
+         // Kvadrat.cs
+         public void ChangeDirection() {
+            KrajnaPozicija = opseg - KrajnaPozicija;
+            moving = true;
+            if (nasoka == -1)
+            {
+                nasoka = 1;
+            }
+            else {
+                nasoka = -1;
+            }
+        
+        }
+         
+         this switches KrajnaPozicija between 0 and opseg, sets the moving flag and switches nasoka between -1 and 1.
+         
+        // Tabla.cs
+          public void CheckDelete(int a, int b) {
+         if (tabla[a].N_Tekstura == tabla[b].N_Tekstura && 
+         tabla[a].Partner==-1 && tabla[b].Partner==-1) { 
+         
+         tabla[b].ToDelete=true; // delete flag true when finishes 
+         tabla[b].Partner = a; // spari go so a
+         tabla[a].Partner=b;
+         SelektiranOne = SelektiranTwo = -1;
+         }
+     }
+         
+         
+      if the pictures on the two selected cubes are the same and both of them don't have a Parther so far, this sets the To delete flag of the second selection, sets the partner of both cubes, and deselects them. 
+      
+  // Tabla.cs
+  public void Update()
+     {
+         int i = 0;
+         for (; i < tabla.Count; i++)
+         {
+             if (!tabla[i].Deleted && !tabla[i].moving && tabla[i].ToDelete)
+             {
+                 if (tabla[i].Serenity == 20)
+                 {
+                     tabla[i].Deleted = true;
+                     tabla[tabla[i].Partner].Deleted = true;
+        //Maybe Change             RPlus();
+                 }
+                 
+                 break;
+             }
+         }
+        
+     }
+     
+     this iterates through all of the cubes checking every cube if its not deleted, not moving and is slated to delete, and if the cube has been resting for 20 timer ticks , then it deletes it and its Partner.
+     
+     The only posible Change is the call to RPlus which moves the selection ball to the right when a deletion occurs, this is currently commented because while playing the game it moves the ball unexpectedly,   while now the ball will remain in an empty spot until the next hit of WASD when the game will resume normally.
+ 
+
+
 
