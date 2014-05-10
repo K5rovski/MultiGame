@@ -78,8 +78,8 @@ Function Explanation
          }
          
 ```
-      if the first selection is empty the code above sets it to the new location 'kliknat' 
-      and changes the direction of the selected cube
+if the first selection is empty the code above sets it to the new location 'kliknat' 
+and changes the direction of the selected cube
 ```cs    
        else if (SelektiranOne!=-1 && SelektiranTwo!=-1) {
              tabla[SelektiranOne].ChangeDirection();  // 
@@ -91,8 +91,9 @@ Function Explanation
          
          }
 ```
-         if the two selections are not empty it changes their location, direction 
-         and sets the first selection to 'kliknat' changing its direction and deselects the second selection.
+if the two selections are not empty it changes their location, direction 
+and sets the first selection to 'kliknat' changing its direction and deselects the second selection.
+         
 ```csharp  
          
          else if (SelektiranOne == kliknat) { 
@@ -100,7 +101,8 @@ Function Explanation
          SelektiranOne=-1;
          }
 ```       
-         if you select the already selected element it deselects it and changes the direction.
+if you select the already selected element it deselects it and changes the direction.
+
 ```csharp     
           else  if (SelektiranTwo==-1){
              SelektiranTwo=kliknat;
@@ -108,8 +110,9 @@ Function Explanation
              CheckDelete(SelektiranOne,SelektiranTwo); // ako se ednakvi teksturite napravi selecttwo i izbrisi two 
          }
 ```     
-         if only the first selection is made this sets the second selection,changes its direction,
-         also checking to seee if the two selections are the same.
+if only the first selection is made this sets the second selection,changes its direction,
+also checking to see if the two selections are the same.
+         
 ```csharp     
          // Kvadrat.cs
          public void ChangeDirection() {
@@ -125,7 +128,8 @@ Function Explanation
         
         }
 ```     
-         this switches KrajnaPozicija between 0 and opseg, sets the moving flag and switches nasoka between -1 and 1.
+this switches KrajnaPozicija between 0 and opseg, sets the moving flag and switches nasoka between -1 and 1.
+
 ```csharp     
         // Tabla.cs
           public void CheckDelete(int a, int b) {
@@ -140,9 +144,10 @@ Function Explanation
      }
          
 ```   
-      if the pictures on the two selected cubes are the same and both of them don't have a Parther
-      so far, this sets the Todelete flag of the second selection, 
-      sets the partner of both cubes, and deselects them. 
+if the pictures on the two selected cubes are the same and both of them don't have a Parther
+so far, this sets the Todelete flag of the second selection, 
+sets the partner of both cubes, and deselects them. 
+
 ```csharp
    
   // Tabla.cs
