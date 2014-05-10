@@ -170,7 +170,7 @@ Function Explanation
      not moving and is slated to delete, and if the cube has been resting for 20 timer ticks , 
      then it deletes it and its Partner.
      
-     The only posible Change is the call to RPlus which moves the selection ball to the right when a deletion occurs,
+     The **only posible Change** is the call to RPlus which moves the selection ball to the right when a deletion occurs,
      this is currently commented because while playing the game it moves the ball unexpectedly,
      while now the ball will remain in an empty spot until the next hit of WASD when the game will resume normally.
  
