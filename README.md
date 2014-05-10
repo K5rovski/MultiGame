@@ -67,7 +67,8 @@ Function Explanation
 ------------------
 
 
- 'public void Keyboard_In (int kliknat)' is the function in MatchTwo/Tabla.cs that is called whenever a player presses SPACE, it deals with the (de)selection  of the cubes.
+ 'public void Keyboard_In (int kliknat)' is the function in MatchTwo/Tabla.cs 
+ that is called whenever a player presses SPACE, it deals with the (de)selection  of the cubes.
  
  The argument of the function is the location of the newly selected cube.
 ```csharp
@@ -77,7 +78,8 @@ Function Explanation
          }
          
 ```
-      if the first selection is empty the code above sets it to the new location 'kliknat' and changes the direction of the selected cube
+      if the first selection is empty the code above sets it to the new location 'kliknat' 
+      and changes the direction of the selected cube
 ```cs    
        else if (SelektiranOne!=-1 && SelektiranTwo!=-1) {
              tabla[SelektiranOne].ChangeDirection();  // 
@@ -89,7 +91,8 @@ Function Explanation
          
          }
 ```
-         if the two selections are not empty it changes their location. direction and sets the first selection to 'kliknat' changing its direction and deselects the second selection.
+         if the two selections are not empty it changes their location, direction 
+         and sets the first selection to 'kliknat' changing its direction and deselects the second selection.
 ```csharp  
          
          else if (SelektiranOne == kliknat) { 
@@ -105,7 +108,8 @@ Function Explanation
              CheckDelete(SelektiranOne,SelektiranTwo); // ako se ednakvi teksturite napravi selecttwo i izbrisi two 
          }
 ```     
-         if only the first selection is made this sets the second selection,changes its direction, also checking to seee if the two selections are the same.
+         if only the first selection is made this sets the second selection,changes its direction,
+         also checking to seee if the two selections are the same.
 ```csharp     
          // Kvadrat.cs
          public void ChangeDirection() {
@@ -137,8 +141,8 @@ Function Explanation
          
 ```   
       if the pictures on the two selected cubes are the same and both of them don't have a Parther
-      so far, this sets the
-      To delete flag of the second selection, sets the partner of both cubes, and deselects them. 
+      so far, this sets theTodelete flag of the second selection, 
+      sets the partner of both cubes, and deselects them. 
 ```csharp
    
   // Tabla.cs
@@ -162,9 +166,13 @@ Function Explanation
         
      }
 ``` 
-     this iterates through all of the cubes checking every cube if its not deleted, not moving and is slated to delete, and if the cube has been resting for 20 timer ticks , then it deletes it and its Partner.
+     this iterates through all of the cubes checking every cube if its not deleted,
+     not moving and is slated to delete, and if the cube has been resting for 20 timer ticks , 
+     then it deletes it and its Partner.
      
-     The only posible Change is the call to RPlus which moves the selection ball to the right when a deletion occurs, this is currently commented because while playing the game it moves the ball unexpectedly,   while now the ball will remain in an empty spot until the next hit of WASD when the game will resume normally.
+     The only posible Change is the call to RPlus which moves the selection ball to the right when a deletion occurs,
+     this is currently commented because while playing the game it moves the ball unexpectedly,
+     while now the ball will remain in an empty spot until the next hit of WASD when the game will resume normally.
  
 
 
