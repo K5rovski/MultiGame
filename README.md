@@ -141,7 +141,7 @@ Function Explanation
          
 ```   
       if the pictures on the two selected cubes are the same and both of them don't have a Parther
-      so far, this sets theTodelete flag of the second selection, 
+      so far, this sets the Todelete flag of the second selection, 
       sets the partner of both cubes, and deselects them. 
 ```csharp
    
